@@ -1,9 +1,12 @@
-//
-// Created by Bar Ifrah on 19/03/2021.
-//
 #pragma once
+#include "Function.h"
+#include <memory>
+using std::shared_ptr;
 
 class Menu {
 public:
-    void showMenu();
+    Menu(); //constructor    
+    void showMenu()const;
+private:
+    vector<shared_ptr<Function>> m_functionList;
 };

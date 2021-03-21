@@ -1,4 +1,8 @@
-class Sin {
+#pragma once
+#include "Function.h"
+
+class Sin: public Function {
 public:
-	double CalcSinValue(const double x);
+	virtual double eval(double) override;
+	virtual void print()const override;
 };

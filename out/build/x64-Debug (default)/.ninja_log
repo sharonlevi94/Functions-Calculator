@@ -1,7 +1,10 @@
 # ninja log v5
-2	58	637965757	CMakeFiles/ex1_sharon_levi_bar_ifrah.dir/src/Menu.cpp.obj	dbb13852face2267
-7	109	637965757	CMakeFiles/ex1_sharon_levi_bar_ifrah.dir/src/Ln.cpp.obj	8476670049616105
-4	110	637965757	CMakeFiles/ex1_sharon_levi_bar_ifrah.dir/src/Sin.cpp.obj	4fabe3a6f4245695
-10	557	637965758	CMakeFiles/ex1_sharon_levi_bar_ifrah.dir/src/Poly.cpp.obj	23e9d25223cc71d3
-2	564	637966069	CMakeFiles/ex1_sharon_levi_bar_ifrah.dir/src/ex1_sharon_levi_bar_ifrah.cpp.obj	461fce46fa56433f
-564	854	637966069	ex1_sharon_levi_bar_ifrah.exe	59242ff3d7f37b58
+16	446	637975258	CMakeFiles/ex1_sharon_levi_bar_ifrah.dir/src/Menu.cpp.obj	aa1b38b10582fc2d
+29	523	637975258	CMakeFiles/ex1_sharon_levi_bar_ifrah.dir/src/Sin.cpp.obj	1d96b3a7f80a92bc
+40	530	637975258	CMakeFiles/ex1_sharon_levi_bar_ifrah.dir/src/Ln.cpp.obj	36027bd314ca261b
+48	944	637975259	CMakeFiles/ex1_sharon_levi_bar_ifrah.dir/src/Function.cpp.obj	56cc98bfcde9c8b8
+3	1049	637975259	CMakeFiles/ex1_sharon_levi_bar_ifrah.dir/src/ex1_sharon_levi_bar_ifrah.cpp.obj	e81c5942c19e72af
+54	1072	637975259	CMakeFiles/ex1_sharon_levi_bar_ifrah.dir/src/Poly.cpp.obj	d5715d19033d9921
+1073	1602	637975259	ex1_sharon_levi_bar_ifrah.exe	a7064473c37521cd
+1	631	637975358	CMakeFiles/ex1_sharon_levi_bar_ifrah.dir/src/Poly.cpp.obj	d5715d19033d9921
+631	795	637975358	ex1_sharon_levi_bar_ifrah.exe	a7064473c37521cd

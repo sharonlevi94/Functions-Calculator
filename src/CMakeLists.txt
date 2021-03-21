@@ -3,5 +3,6 @@ target_sources ("ex1_sharon_levi_bar_ifrah" PRIVATE
 						"Menu.cpp"
 						"Sin.cpp"
 						"Ln.cpp"
-						"Poly.cpp") 
+						"Poly.cpp"
+						"Function.cpp") 
 											
