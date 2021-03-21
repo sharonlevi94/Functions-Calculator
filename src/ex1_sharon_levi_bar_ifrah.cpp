@@ -10,7 +10,7 @@ using std::vector;
 using std::string;
 using std::map;
 //enum section:
-enum Commands { eval=0, poly, mul, add, comp, log, del, help};
+enum Commands { eval=0, poly, mul, add, comp, logn, del, help};
 //prototypes section:
 void setCommandsList(map<string, Commands>);
 //main section:
@@ -35,7 +35,9 @@ int main() {
                 break;
             case comp:
                 break;
-            case log:
+            case logn:
+                break;
+            case del:
                 break;
             case help:
                 break;
@@ -55,7 +57,7 @@ void setCommandsList(map<string,Commands> commands) {
     commands.insert(std::pair<string, Commands>(MUL, mul));
     commands.insert(std::pair<string, Commands>(ADD, add));
     commands.insert(std::pair<string, Commands>(COMP, comp));
-    commands.insert(std::pair<string, Commands>(LOG, log));
+    commands.insert(std::pair<string, Commands>(LOGN, logn));
     commands.insert(std::pair<string, Commands>(DEL, del));
     commands.insert(std::pair<string, Commands>(HELP, help));
 }
