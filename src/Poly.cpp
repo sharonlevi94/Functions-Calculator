@@ -19,7 +19,7 @@ std::ostream& operator<<(std::ostream& os, const Poly& p) {
 double Poly::eval(double x) {
 	int i;
 	double sum = 0;
-	for (i = 0; i < m_degree; i++) {
+	for (i = 0; i <= m_degree; i++) {
 		sum += m_factors[i] * (pow(x, i));
 	}
 	return sum;

@@ -1,6 +1,7 @@
 #include "Menu.h"
 #include "Sin.h"
 #include "Ln.h"
+#include "Poly.h"
 #include <memory>
 #include <iostream>
 using std::shared_ptr;
@@ -12,6 +13,7 @@ Menu::Menu() {
 }
 
 void Menu::showMenu()const {
+	std::cout << std::endl;
 	std::cout << "This is the function list:" << std::endl;
 	for (int i = 0; i < this->m_functionList.size(); i++) {
 		std::cout << i << ": ";
@@ -31,4 +33,15 @@ int Menu::getSize()const {
 
 void Menu::eval(double i,double x){
 	std::cout << this->m_functionList[i]->eval(x) << std::endl;
+}
+
+void Menu::createPoly() {
+	double arg1,arg2;
+	std::cin >> arg1;
+	vector<double> factors;
+	for (int i = 0; i <= arg1; i++) {
+		std::cin >> arg2;
+		factors.push_back(arg2);
+	}
+	this->m_functionList.push_back(std::make_shared <Poly>(arg1,factors));
 }

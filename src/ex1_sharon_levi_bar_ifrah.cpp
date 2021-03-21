@@ -23,11 +23,13 @@ void printHelp();
 int main() {
     Menu list;
     map<string, Commands> command_list;
+    string command;
+    double arg1, arg2;
+
+    setCommandsList(command_list);
+
     while (true) {
         list.showMenu();
-        string command;
-        double arg1, arg2;
-        setCommandsList(command_list);
         std::cin >> command;
         auto it = command_list.find(command);
         if (it != command_list.end()) {
@@ -38,7 +40,7 @@ int main() {
                     list.eval(arg1, arg2);
                 break;
             case poly:
-                cin >> arg1;
+                list.createPoly();
                 break;
             case mul:
                 cin >> arg1 >> arg2;
@@ -86,7 +88,6 @@ void setCommandsList(map<string,Commands>& commands) {
 }
 
 void printHelp() {
-    
         std::cout << std::endl <<
         "Following is the list of the calculator's available commands:\n" <<
         "eval(uate) num x - Evaluates function #num on x\n" <<
