@@ -13,8 +13,10 @@ Menu::Menu() {
 
 void Menu::showMenu()const {
 	std::cout << "This is the function list:" << std::endl;
-	for (int i = 0; i < this->m_functionList.size() ; i++) {
+	for (int i = 0; i < this->m_functionList.size(); i++) {
+		std::cout << i << ": ";
 		this->m_functionList[i]->print();
+		std::cout << std::endl;
 	}
 	std::cout << "Please enter a command ('help' for command list):";
 }

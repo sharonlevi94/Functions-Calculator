@@ -10,9 +10,9 @@ using std::vector;
 using std::string;
 using std::map;
 //enum section:
-enum Commands { eval=0, poly, mul, add, comp, logn, del, help};
+enum Commands { eval=0, poly, mul, add, comp, logn, del, help, exitt};
 //prototypes section:
-void setCommandsList(map<string, Commands>);
+void setCommandsList(map<string, Commands>&);
 //main section:
 int main() {
     Menu list;
@@ -23,9 +23,9 @@ int main() {
         setCommandsList(command_list);
         std::cin >> command >> args;
         auto it = command_list.find(command);
-        if( it != command_list.end())
+        if (it != command_list.end()) {
             switch (it->second) {
-            case eval: 
+            case eval:
                 break;
             case poly:
                 break;
@@ -45,13 +45,17 @@ int main() {
                 std::cout << "Goodbye" << std::endl;
                 return EXIT_SUCCESS;
             }
+        }
+        else 
+            std::cout << "command not found, please try again..." << std::endl;
+        
     }
     
     return EXIT_SUCCESS;
 }
 
 //functions section:
-void setCommandsList(map<string,Commands> commands) {
+void setCommandsList(map<string,Commands>& commands) {
     commands.insert(std::pair<string, Commands>(EVAL, eval));
     commands.insert(std::pair<string, Commands>(POLY, poly));
     commands.insert(std::pair<string, Commands>(MUL, mul));
@@ -60,4 +64,5 @@ void setCommandsList(map<string,Commands> commands) {
     commands.insert(std::pair<string, Commands>(LOGN, logn));
     commands.insert(std::pair<string, Commands>(DEL, del));
     commands.insert(std::pair<string, Commands>(HELP, help));
+    commands.insert(std::pair<string, Commands>(EXIT, exitt));
 }

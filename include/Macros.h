@@ -7,3 +7,4 @@ constexpr auto COMP = "comp";
 constexpr auto LOGN = "logn";
 constexpr auto DEL = "del";
 constexpr auto HELP = "help";
+constexpr auto EXIT = "exit";
