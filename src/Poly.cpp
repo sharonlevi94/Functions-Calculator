@@ -25,7 +25,7 @@ double Poly::eval(double x) {
 	return sum;
 }
 
-void Poly::print()const {
+void Poly::print(shared_ptr<Function>myPtr)const {
 	int i;
 	for (i = m_factors.size() - 1; i > 0; i--) {
 		std::cout << m_factors[i] << "*" << "X^" << i << " + ";

@@ -12,10 +12,8 @@ double Add::eval(double x) {
     return (this->m_addFunc[0]->eval(x) + this->m_addFunc[1]->eval(x));
 }
 
-void Add::print() const {
-    std::cout << "( "; this->m_addFunc[0]->print();
-    std::cout << ") + ( "; this->m_addFunc[1]->print();
+void Add::print(shared_ptr<Function>myPtr) const {
+    std::cout << "( "; this->m_addFunc[0]->print(nullptr);
+    std::cout << ") + ( "; this->m_addFunc[1]->print(nullptr);
     std::cout <<" )";
-
-
 }

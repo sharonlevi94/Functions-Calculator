@@ -49,7 +49,7 @@ int main() {
                 list.addFunctions();
                 break;
             case comp:
-                cin >> arg1 >> arg2;
+                list.compFunctions();
                 break;
             case logn:
                 cin >> arg1 >> arg2;

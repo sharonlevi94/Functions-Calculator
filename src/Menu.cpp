@@ -1,6 +1,7 @@
 #include "Menu.h"
 #include "Add.h"
 #include "Sin.h"
+#include "Composite.h"
 #include "Ln.h"
 #include "Poly.h"
 #include "Multiply.h"
@@ -19,7 +20,7 @@ void Menu::showMenu()const {
 	std::cout << "This is the function list:" << std::endl;
 	for (int i = 0; i < this->m_functionList.size(); i++) {
 		std::cout << i << ": ";
-		this->m_functionList[i]->print();
+		this->m_functionList[i]->print(nullptr);
 		std::cout << std::endl;
 	}
 	std::cout << "Please enter a command ('help' for command list):";
@@ -58,4 +59,10 @@ void Menu::addFunctions() {
     int arg1, arg2;
     std::cin >> arg1 >> arg2;
     this->m_functionList.push_back(std::make_shared<Add>(this->m_functionList[arg1], this->m_functionList[arg2]));
+}
+
+void Menu::compFunctions() {
+    int arg1, arg2;
+    std::cin >> arg1 >> arg2;
+    this->m_functionList.push_back(std::make_shared<Composite>(this->m_functionList[arg1], this->m_functionList[arg2]));
 }

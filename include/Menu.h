@@ -13,6 +13,7 @@ public:
     int getSize()const;
     void multiplyFunctions();
     void addFunctions();
+    void compFunctions();
 private:
     vector<shared_ptr<Function>> m_functionList;
 };

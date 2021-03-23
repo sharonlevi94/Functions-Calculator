@@ -6,5 +6,6 @@ target_sources ("ex1_sharon_levi_bar_ifrah" PRIVATE
 						"Poly.cpp"
 						"Function.cpp"
 						"Multiply.cpp"
-						"Add.cpp")
+						"Add.cpp"
+						"Composite.cpp")
 											
