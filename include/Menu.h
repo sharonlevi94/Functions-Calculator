@@ -12,6 +12,7 @@ public:
     void createPoly();
     int getSize()const;
     void multiplyFunctions();
+    void addFunctions();
 private:
     vector<shared_ptr<Function>> m_functionList;
 };

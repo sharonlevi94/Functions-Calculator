@@ -1,4 +1,5 @@
 #include "Menu.h"
+#include "Add.h"
 #include "Sin.h"
 #include "Ln.h"
 #include "Poly.h"
@@ -53,3 +54,8 @@ void Menu::multiplyFunctions() {
     this->m_functionList.push_back(std::make_shared<Multiply>(this->m_functionList[arg1], this->m_functionList[arg2]));
 }
 
+void Menu::addFunctions() {
+    int arg1, arg2;
+    std::cin >> arg1 >> arg2;
+    this->m_functionList.push_back(std::make_shared<Add>(this->m_functionList[arg1], this->m_functionList[arg2]));
+}

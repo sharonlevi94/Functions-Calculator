@@ -2,7 +2,7 @@
 #include <iostream>
 #include "Poly.h"
 #include "Menu.h"
-//#include <string>
+#include <string>
 #include <map>
 #include "Macros.h"
 
@@ -46,7 +46,7 @@ int main() {
                 list.multiplyFunctions();
                 break;
             case add:
-                cin >> arg1 >> arg2;
+                list.addFunctions();
                 break;
             case comp:
                 cin >> arg1 >> arg2;

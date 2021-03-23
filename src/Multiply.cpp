@@ -1,14 +1,5 @@
 #include "Multiply.h"
 #include <iostream>
-//Multiply::Multiply(const Function&, const Function&) : m_mulFunc(vector<shared_ptr<Function>>()) {
-//
-//}
-
-//
-//Multiply::Multiply(const Function &func1, const Function &func2) {
-//    m_mulFunc.clear();
-//    this->m_mulFunc.push_back();
-//}
 
 Multiply::Multiply(const shared_ptr<Function>& ptr1, const shared_ptr<Function>& ptr2) {
     const std::shared_ptr<Function>&x = ptr1;
@@ -25,6 +16,4 @@ void Multiply::print() const {
     std::cout << "( "; this->m_mulFunc[0]->print();
     std::cout << ") * ( "; this->m_mulFunc[1]->print();
     std::cout <<" )";
-
-
 }

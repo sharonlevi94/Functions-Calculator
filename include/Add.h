@@ -3,11 +3,12 @@
 #include <memory>
 #include <vector>
 
-class Multiply : public Function {
+class Add : public Function {
 public:
-    Multiply(const shared_ptr<Function>&, const shared_ptr<Function>&);
+    Add(const shared_ptr<Function>&, const shared_ptr<Function>&);
     double eval(double) override;
     void print() const override;
+
 private:
-    vector<shared_ptr<Function>> m_mulFunc;
+    vector<shared_ptr<Function>> m_addFunc;
 };

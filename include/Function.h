@@ -10,8 +10,6 @@ public:
 	Function();
 	virtual double eval(double) = 0;
 	virtual void print()const = 0;
-private:
-	vector<shared_ptr<Function>> m_functions;
 };
 
 
