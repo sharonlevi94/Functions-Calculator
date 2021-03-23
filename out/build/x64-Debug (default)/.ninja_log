@@ -52,3 +52,16 @@
 755	922	638060936	ex1_sharon_levi_bar_ifrah.exe	a7064473c37521cd
 0	665	638061038	CMakeFiles/ex1_sharon_levi_bar_ifrah.dir/src/Menu.cpp.obj	aa1b38b10582fc2d
 665	805	638061038	ex1_sharon_levi_bar_ifrah.exe	a7064473c37521cd
+8	464	638221530	build.ninja	7c5da33608cacbd6
+18	1452	638221532	CMakeFiles/ex1_sharon_levi_bar_ifrah.dir/src/Function.cpp.obj	56cc98bfcde9c8b8
+7	1467	638221532	CMakeFiles/ex1_sharon_levi_bar_ifrah.dir/src/Composite.cpp.obj	700ce381d3952774
+14	1784	638221532	CMakeFiles/ex1_sharon_levi_bar_ifrah.dir/src/Ln.cpp.obj	36027bd314ca261b
+25	1821	638221532	CMakeFiles/ex1_sharon_levi_bar_ifrah.dir/src/Poly.cpp.obj	d5715d19033d9921
+4	1831	638221532	CMakeFiles/ex1_sharon_levi_bar_ifrah.dir/src/Add.cpp.obj	f972c8d367454009
+11	1838	638221532	CMakeFiles/ex1_sharon_levi_bar_ifrah.dir/src/Multiply.cpp.obj	e61dac8df6506ca9
+29	1912	638221532	CMakeFiles/ex1_sharon_levi_bar_ifrah.dir/src/Sin.cpp.obj	1d96b3a7f80a92bc
+22	1952	638221532	CMakeFiles/ex1_sharon_levi_bar_ifrah.dir/src/Menu.cpp.obj	aa1b38b10582fc2d
+1	2043	638221532	CMakeFiles/ex1_sharon_levi_bar_ifrah.dir/src/ex1_sharon_levi_bar_ifrah.cpp.obj	e81c5942c19e72af
+2043	2377	638221532	ex1_sharon_levi_bar_ifrah.exe	80ebe7aad36de9ce
+1	866	638224455	CMakeFiles/ex1_sharon_levi_bar_ifrah.dir/src/Poly.cpp.obj	d5715d19033d9921
+867	1019	638224455	ex1_sharon_levi_bar_ifrah.exe	80ebe7aad36de9ce

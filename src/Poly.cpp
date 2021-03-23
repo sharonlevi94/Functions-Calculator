@@ -27,8 +27,20 @@ double Poly::eval(double x) {
 
 void Poly::print(shared_ptr<Function>myPtr)const {
 	int i;
-	for (i = m_factors.size() - 1; i > 0; i--) {
-		std::cout << m_factors[i] << "*" << "X^" << i << " + ";
+	if (myPtr == nullptr) {
+		for (i = m_factors.size() - 1; i > 0; i--) {
+			std::cout << m_factors[i] << "*" << "X^" << i << " + ";
+		}
+		std::cout << m_factors[i] << "*" << "X^" << i;
 	}
-	std::cout << m_factors[i] << "*" << "X^" << i;
+	else {
+		for (i = m_factors.size() - 1; i > 0; i--) {
+			std::cout << m_factors[i] << "*(";
+			myPtr->print(nullptr);
+			std::cout << ")^" << i << " + ";
+		}
+		std::cout << m_factors[i] << "*(";
+		myPtr->print(nullptr);
+		std::cout << ")^" << i;
+	}
 }
