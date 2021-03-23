@@ -15,3 +15,7 @@ double Composite::eval(double x) {
 void Composite::print(shared_ptr<Function>) const {
     this->m_compFunc[0]->print(this->m_compFunc[1]);
 }
+
+void Composite::printWithValue(double x)const {
+    this->m_compFunc[0]->print(this->m_compFunc[1]);
+}

@@ -10,6 +10,7 @@ public:
 	Function();
 	virtual double eval(double) = 0;
 	virtual void print(shared_ptr<Function>)const = 0;
+	virtual void printWithValue(double)const = 0;
 };
 
 

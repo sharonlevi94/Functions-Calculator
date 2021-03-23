@@ -14,3 +14,7 @@ void Sin::print(shared_ptr<Function> myPtr)const {
         std::cout << ")";
    }
 }
+
+void Sin::printWithValue(double x)const {
+    std::cout << "sin(" << x << ") ";
+}

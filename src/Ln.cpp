@@ -15,3 +15,7 @@ void Ln::print(shared_ptr<Function>myPtr)const {
         std::cout << ")";
     }
 }
+
+void Ln::printWithValue(double x)const {
+    std::cout << "ln(" << x << ") ";
+}

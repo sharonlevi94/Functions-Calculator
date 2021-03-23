@@ -35,6 +35,9 @@ int Menu::getSize()const {
 }
 
 void Menu::eval(double i,double x){
+	std::cout << std::endl;
+	this->m_functionList[i]->printWithValue(x);
+	std::cout << "=";
 	std::cout << this->m_functionList[i]->eval(x) << std::endl;
 }
 

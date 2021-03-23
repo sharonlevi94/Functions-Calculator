@@ -44,3 +44,15 @@ void Poly::print(shared_ptr<Function>myPtr)const {
 		std::cout << ")^" << i;
 	}
 }
+
+void Poly::printWithValue(double x)const {
+	int i;
+	for (i = m_factors.size() - 1; i > 0; i--) {
+		std::cout << m_factors[i] << "*"
+				  << x 
+				  << "^" << i << " + ";
+	}
+	std::cout << m_factors[i] << "*"
+			  << x
+			  << "^" << i ;
+}

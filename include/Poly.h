@@ -9,6 +9,7 @@ public:
 	const vector<double>& getFactors()const;
 	double eval(double) override;
 	void print(shared_ptr<Function>)const override;
+	virtual void printWithValue(double)const override;
 private:
 	int m_degree;
 	vector<double> m_factors;

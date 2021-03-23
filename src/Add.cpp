@@ -17,3 +17,9 @@ void Add::print(shared_ptr<Function>myPtr) const {
     std::cout << ") + ( "; this->m_addFunc[1]->print(nullptr);
     std::cout <<" )";
 }
+
+void Add::printWithValue(double x)const {
+    std::cout << "("; this->m_addFunc[0]->printWithValue(x);
+    std::cout << ") + ("; this->m_addFunc[1]->printWithValue(x);
+    std::cout << " ) ";
+}
