@@ -2,6 +2,7 @@
 #include "Sin.h"
 #include "Ln.h"
 #include "Poly.h"
+#include "Multiply.h"
 #include <memory>
 #include <iostream>
 using std::shared_ptr;
@@ -45,3 +46,10 @@ void Menu::createPoly() {
 	}
 	this->m_functionList.push_back(std::make_shared <Poly>(arg1,factors));
 }
+
+void Menu::multiplyFunctions() {
+    int arg1, arg2;
+    std::cin >> arg1 >> arg2;
+    this->m_functionList.push_back(std::make_shared<Multiply>(this->m_functionList[arg1], this->m_functionList[arg2]));
+}
+

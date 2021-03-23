@@ -2,7 +2,7 @@
 #include <iostream>
 #include "Poly.h"
 #include "Menu.h"
-#include <string>
+//#include <string>
 #include <map>
 #include "Macros.h"
 
@@ -43,7 +43,7 @@ int main() {
                 list.createPoly();
                 break;
             case mul:
-                cin >> arg1 >> arg2;
+                list.multiplyFunctions();
                 break;
             case add:
                 cin >> arg1 >> arg2;
@@ -70,8 +70,7 @@ int main() {
         }
         else 
             std::cout << "command not found, please try again..." << std::endl;
-    }   
-    return EXIT_SUCCESS;
+    }
 }
 
 //functions section:
@@ -103,3 +102,5 @@ void printHelp() {
         "help - Prints this help screen\n" <<
         "exit - Exits the program\n" << std::endl;
 }
+
+

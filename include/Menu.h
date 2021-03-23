@@ -11,6 +11,7 @@ public:
     void deleteFunction(int);
     void createPoly();
     int getSize()const;
+    void multiplyFunctions();
 private:
     vector<shared_ptr<Function>> m_functionList;
 };
