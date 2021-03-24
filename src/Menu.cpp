@@ -7,6 +7,8 @@
 #include "Multiply.h"
 #include <memory>
 #include <iostream>
+//#include <limits>
+#include <iomanip>
 using std::shared_ptr;
 
 Menu::Menu() {
@@ -16,7 +18,6 @@ Menu::Menu() {
 }
 
 void Menu::showMenu()const {
-	std::cout << std::endl;
 	std::cout << "This is the function list:" << std::endl;
 	for (int i = 0; i < this->m_functionList.size(); i++) {
 		std::cout << i << ": ";
@@ -38,7 +39,8 @@ void Menu::eval(double i,double x){
 	std::cout << std::endl;
 	this->m_functionList[i]->printWithValue(x);
 	std::cout << "=";
-	std::cout << this->m_functionList[i]->eval(x) << std::endl;
+	std::cout << std::setprecision(2) << 
+				 this->m_functionList[i]->eval(x) << std::endl;
 }
 
 void Menu::createPoly() {
