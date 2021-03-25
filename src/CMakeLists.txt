@@ -7,5 +7,6 @@ target_sources ("ex1_sharon_levi_bar_ifrah" PRIVATE
 						"Function.cpp"
 						"Multiply.cpp"
 						"Add.cpp"
-						"Composite.cpp")
+						"Composite.cpp"
+						"Log.cpp")
 											

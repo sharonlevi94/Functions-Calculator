@@ -5,20 +5,20 @@
 #include <string>
 #include <map>
 #include "Macros.h"
-
+/*-----------------------------------------------------------------------------*/
 //using section:
 using std::vector;
 using std::string;
 using std::map;
 using std::cin;
-
+/*-----------------------------------------------------------------------------*/
 //enum section:
 enum Commands { eval, poly, mul, add, comp, logn, del, help, exitt};
-
+/*-----------------------------------------------------------------------------*/
 //prototypes section:
 void setCommandsList(map<string, Commands>&);
 void printHelp();
-
+/*-----------------------------------------------------------------------------*/
 //main section:
 int main() {
     Menu list;
@@ -52,7 +52,7 @@ int main() {
                 list.compFunctions();
                 break;
             case logn:
-                cin >> arg1 >> arg2;
+                list.logFunctions();
                 break;
             case del:
                 int arg;
@@ -72,7 +72,7 @@ int main() {
             std::cout << "command not found, please try again..." << std::endl;
     }
 }
-
+/*-----------------------------------------------------------------------------*/
 //functions section:
 void setCommandsList(map<string,Commands>& commands) {
     commands.insert(std::pair<string, Commands>(EVAL, eval));
@@ -85,7 +85,7 @@ void setCommandsList(map<string,Commands>& commands) {
     commands.insert(std::pair<string, Commands>(HELP, help));
     commands.insert(std::pair<string, Commands>(EXIT, exitt));
 }
-
+/*-----------------------------------------------------------------------------*/
 void printHelp() {
         std::cout << std::endl <<
         "Following is the list of the calculator's available commands:\n" <<

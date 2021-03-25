@@ -4,19 +4,19 @@
 #include "Composite.h"
 #include "Ln.h"
 #include "Poly.h"
+#include "Log.h"
 #include "Multiply.h"
 #include <memory>
 #include <iostream>
-//#include <limits>
 #include <iomanip>
 using std::shared_ptr;
-
+/*-----------------------------------------------------------------------------*/
 Menu::Menu() {
 	//creating the initial functions in the list:
 	this->m_functionList.push_back(std::make_shared <Sin>());
 	this->m_functionList.push_back(std::make_shared <Ln>());
 }
-
+/*-----------------------------------------------------------------------------*/
 void Menu::showMenu()const {
 	std::cout << "This is the function list:" << std::endl;
 	for (int i = 0; i < this->m_functionList.size(); i++) {
@@ -26,15 +26,15 @@ void Menu::showMenu()const {
 	}
 	std::cout << "Please enter a command ('help' for command list):";
 }
-
+/*-----------------------------------------------------------------------------*/
 void Menu::deleteFunction(int num) {
 	this->m_functionList.erase(this->m_functionList.begin() + num);
 }
-
+/*-----------------------------------------------------------------------------*/
 int Menu::getSize()const {
 	return this->m_functionList.size();
 }
-
+/*-----------------------------------------------------------------------------*/
 void Menu::eval(double i,double x){
 	std::cout << std::endl;
 	this->m_functionList[i]->printWithValue(x);
@@ -42,7 +42,7 @@ void Menu::eval(double i,double x){
 	std::cout << std::setprecision(2) << 
 				 this->m_functionList[i]->eval(x) << std::endl;
 }
-
+/*-----------------------------------------------------------------------------*/
 void Menu::createPoly() {
 	double arg1,arg2;
 	std::cin >> arg1;
@@ -53,21 +53,31 @@ void Menu::createPoly() {
 	}
 	this->m_functionList.push_back(std::make_shared <Poly>(arg1,factors));
 }
-
+/*-----------------------------------------------------------------------------*/
 void Menu::multiplyFunctions() {
     int arg1, arg2;
     std::cin >> arg1 >> arg2;
-    this->m_functionList.push_back(std::make_shared<Multiply>(this->m_functionList[arg1], this->m_functionList[arg2]));
+    this->m_functionList.push_back(std::make_shared<Multiply>
+		(this->m_functionList[arg1], this->m_functionList[arg2]));
 }
-
+/*-----------------------------------------------------------------------------*/
 void Menu::addFunctions() {
     int arg1, arg2;
     std::cin >> arg1 >> arg2;
-    this->m_functionList.push_back(std::make_shared<Add>(this->m_functionList[arg1], this->m_functionList[arg2]));
+    this->m_functionList.push_back(std::make_shared<Add>
+		(this->m_functionList[arg1], this->m_functionList[arg2]));
 }
-
+/*-----------------------------------------------------------------------------*/
 void Menu::compFunctions() {
     int arg1, arg2;
     std::cin >> arg1 >> arg2;
-    this->m_functionList.push_back(std::make_shared<Composite>(this->m_functionList[arg1], this->m_functionList[arg2]));
+    this->m_functionList.push_back(std::make_shared<Composite>
+		(this->m_functionList[arg1], this->m_functionList[arg2]));
+}
+/*-----------------------------------------------------------------------------*/
+void Menu::logFunctions() {
+	int base, function_num;
+	std::cin >> base >> function_num;
+	this->m_functionList.push_back(std::make_shared<Log>
+		(base, this->m_functionList[function_num]));
 }

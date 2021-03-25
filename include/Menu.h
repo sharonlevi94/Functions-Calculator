@@ -14,6 +14,7 @@ public:
     void multiplyFunctions();
     void addFunctions();
     void compFunctions();
+    void logFunctions();
 private:
     vector<shared_ptr<Function>> m_functionList;
 };

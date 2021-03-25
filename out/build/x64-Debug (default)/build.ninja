@@ -115,6 +115,14 @@ build CMakeFiles\ex1_sharon_levi_bar_ifrah.dir\src\Composite.cpp.obj: CXX_COMPIL
   TARGET_COMPILE_PDB = CMakeFiles\ex1_sharon_levi_bar_ifrah.dir\
   TARGET_PDB = ex1_sharon_levi_bar_ifrah.pdb
 
+build CMakeFiles\ex1_sharon_levi_bar_ifrah.dir\src\Log.cpp.obj: CXX_COMPILER__ex1_sharon_levi_bar_ifrah_Debug ..\..\..\src\Log.cpp || cmake_object_order_depends_target_ex1_sharon_levi_bar_ifrah
+  FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd /permissive- -std:c++17
+  INCLUDES = -I..\..\..\include
+  OBJECT_DIR = CMakeFiles\ex1_sharon_levi_bar_ifrah.dir
+  OBJECT_FILE_DIR = CMakeFiles\ex1_sharon_levi_bar_ifrah.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\ex1_sharon_levi_bar_ifrah.dir\
+  TARGET_PDB = ex1_sharon_levi_bar_ifrah.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target ex1_sharon_levi_bar_ifrah
@@ -123,7 +131,7 @@ build CMakeFiles\ex1_sharon_levi_bar_ifrah.dir\src\Composite.cpp.obj: CXX_COMPIL
 #############################################
 # Link the executable ex1_sharon_levi_bar_ifrah.exe
 
-build ex1_sharon_levi_bar_ifrah.exe: CXX_EXECUTABLE_LINKER__ex1_sharon_levi_bar_ifrah_Debug CMakeFiles\ex1_sharon_levi_bar_ifrah.dir\src\ex1_sharon_levi_bar_ifrah.cpp.obj CMakeFiles\ex1_sharon_levi_bar_ifrah.dir\src\Menu.cpp.obj CMakeFiles\ex1_sharon_levi_bar_ifrah.dir\src\Sin.cpp.obj CMakeFiles\ex1_sharon_levi_bar_ifrah.dir\src\Ln.cpp.obj CMakeFiles\ex1_sharon_levi_bar_ifrah.dir\src\Poly.cpp.obj CMakeFiles\ex1_sharon_levi_bar_ifrah.dir\src\Function.cpp.obj CMakeFiles\ex1_sharon_levi_bar_ifrah.dir\src\Multiply.cpp.obj CMakeFiles\ex1_sharon_levi_bar_ifrah.dir\src\Add.cpp.obj CMakeFiles\ex1_sharon_levi_bar_ifrah.dir\src\Composite.cpp.obj
+build ex1_sharon_levi_bar_ifrah.exe: CXX_EXECUTABLE_LINKER__ex1_sharon_levi_bar_ifrah_Debug CMakeFiles\ex1_sharon_levi_bar_ifrah.dir\src\ex1_sharon_levi_bar_ifrah.cpp.obj CMakeFiles\ex1_sharon_levi_bar_ifrah.dir\src\Menu.cpp.obj CMakeFiles\ex1_sharon_levi_bar_ifrah.dir\src\Sin.cpp.obj CMakeFiles\ex1_sharon_levi_bar_ifrah.dir\src\Ln.cpp.obj CMakeFiles\ex1_sharon_levi_bar_ifrah.dir\src\Poly.cpp.obj CMakeFiles\ex1_sharon_levi_bar_ifrah.dir\src\Function.cpp.obj CMakeFiles\ex1_sharon_levi_bar_ifrah.dir\src\Multiply.cpp.obj CMakeFiles\ex1_sharon_levi_bar_ifrah.dir\src\Add.cpp.obj CMakeFiles\ex1_sharon_levi_bar_ifrah.dir\src\Composite.cpp.obj CMakeFiles\ex1_sharon_levi_bar_ifrah.dir\src\Log.cpp.obj
   FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
