@@ -2,7 +2,7 @@
 #include "Function.h"
 #include <memory>
 #include <vector>
-
+/*-----------------------------------------------------------------------------*/
 class Multiply : public Function {
 public:
     Multiply(const shared_ptr<Function>&, const shared_ptr<Function>&);

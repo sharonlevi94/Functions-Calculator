@@ -1,21 +1,12 @@
 #include "Poly.h"
 #include <vector>
 #include <cmath>
-
+/*-----------------------------------------------------------------------------*/
 Poly::Poly(int n, vector<double> factors)
 	: m_degree(n), m_factors(factors) {}
-
+/*-----------------------------------------------------------------------------*/
 const vector<double>& Poly::getFactors()const  { return m_factors; }
-
-std::ostream& operator<<(std::ostream& os, const Poly& p) {
-	int i;
-	for (i = p.getFactors().size() -1; i > 0 ; i--) {
-		os << p.getFactors()[i] << "*" << "X^" << i << " + ";
-	}
-	os << p.getFactors()[i] << "*" << "X^" << i;
-	return os;
-}
-
+/*-----------------------------------------------------------------------------*/
 double Poly::eval(double x) {
 	int i;
 	double sum = 0;
@@ -24,7 +15,7 @@ double Poly::eval(double x) {
 	}
 	return sum;
 }
-
+/*-----------------------------------------------------------------------------*/
 void Poly::print(shared_ptr<Function>myPtr)const {
 	int i;
 	if (myPtr == nullptr) {
@@ -44,7 +35,7 @@ void Poly::print(shared_ptr<Function>myPtr)const {
 		std::cout << ")^" << i;
 	}
 }
-
+/*-----------------------------------------------------------------------------*/
 void Poly::printWithValue(double x)const {
 	int i;
 	for (i = m_factors.size() - 1; i > 0; i--) {

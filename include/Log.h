@@ -1,6 +1,6 @@
 #pragma once
 #include "Function.h"
-
+/*-----------------------------------------------------------------------------*/
 class Log : public Function {
 public:
 	Log(int, std::shared_ptr<Function> );

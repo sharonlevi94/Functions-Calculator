@@ -72,8 +72,11 @@ int main() {
             std::cout << "command not found, please try again..." << std::endl;
     }
 }
-/*-----------------------------------------------------------------------------*/
+
 //functions section:
+
+/*-----------------------------------------------------------------------------*/
+
 void setCommandsList(map<string,Commands>& commands) {
     commands.insert(std::pair<string, Commands>(EVAL, eval));
     commands.insert(std::pair<string, Commands>(POLY, poly));
@@ -86,6 +89,7 @@ void setCommandsList(map<string,Commands>& commands) {
     commands.insert(std::pair<string, Commands>(EXIT, exitt));
 }
 /*-----------------------------------------------------------------------------*/
+
 void printHelp() {
         std::cout << std::endl <<
         "Following is the list of the calculator's available commands:\n" <<
