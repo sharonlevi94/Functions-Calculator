@@ -58,13 +58,13 @@ Resources‫:‬
 //----------------------------------------------------------------------------
 5. Data structures :
    Vectors - shared pointer vactors to hold functions (sin/ln etc..)
-
+   Map - holds the commands as a keys. 
 //----------------------------------------------------------------------------
 6. Algorithms that are worth mentioning:
 ‫---‬
 //----------------------------------------------------------------------------
 7. Known bugs:
-‫---‬
+‫   "The enum type 'Commends' is unscoped. Prefer 'enum class' over 'enum' (Enum 3)."
 //----------------------------------------------------------------------------
 8. Other notes:
    
