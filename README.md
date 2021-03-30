@@ -1,7 +1,10 @@
-OOP 2 ex. 1:
-Sharon Levi
-Bar Ifrah
-
+1. OOP 2 ex. 1:
+//----------------------------------------------------------------------------
+2. Creators:
+a- Sharon Levi  
+b- Bar Ifrah      
+//----------------------------------------------------------------------------
+3. General ideas and goals of the project
 This program is a 'function calculator'. You start with 2 built-in functions,
 and make your way up from there. Built in functions are: 1.ln(x), 2.sin(x).
 You can use the calculator with the following commands:
@@ -20,3 +23,48 @@ c's are the coefficients.
 
 The input varies between every command. Input is specified on every line of the commands.
 The output will always be the function name with the result.
+//----------------------------------------------------------------------------
+4. Files:
+General:
+CMakeLists.txt- cmake of the project.
+Source files: 
+-CMakeLists.txt - Cmake file to all src files.
+-Add.cpp
+-CMakeLists.txt
+-Composite.cpp
+-Function.cpp
+-Ln.cpp
+-Log.cpp
+-Menu.cpp
+-Multiply.cpp
+-Poly.cpp
+-Sin.cpp
+-ex1_sharon_levi_bar_ifrah.cpp //main
+
+Headers:
+-CMakeLists.txt - To all headers
+-Add.h
+-Composite.h
+-Function.h
+-Ln.h
+-Log.h
+-rMacros.h
+-Menu.h
+-Multiply.h
+-Poly.h
+-Sin.h
+Resources‫:‬
+-NONE
+//----------------------------------------------------------------------------
+5. Data structures :
+   Vectors - shared pointer vactors to hold functions (sin/ln etc..)
+
+//----------------------------------------------------------------------------
+6. Algorithms that are worth mentioning:
+‫---‬
+//----------------------------------------------------------------------------
+7. Known bugs:
+‫---‬
+//----------------------------------------------------------------------------
+8. Other notes:
+   
