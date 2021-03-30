@@ -1,6 +1,7 @@
 #include "Poly.h"
 #include <vector>
 #include <cmath>
+#include "Utilities.h"
 /*-----------------------------------------------------------------------------*/
 Poly::Poly(int n, vector<double> factors)
 	: m_degree(n), m_factors(factors) {}
@@ -36,14 +37,16 @@ void Poly::print(shared_ptr<Function>myPtr)const {
 	}
 }
 /*-----------------------------------------------------------------------------*/
-void Poly::printWithValue(double x)const {
+string Poly::printWithValue(string x)const {
+	string str;
 	int i;
 	for (i = m_factors.size() - 1; i > 0; i--) {
-		std::cout << m_factors[i] << "*"
-				  << x 
-				  << "^" << i << " + ";
+		str = str + ConvertToStr(m_factors[i]) + "*"
+				  + x 
+				  + "^" + ConvertToStr(i) + " + ";
 	}
-	std::cout << m_factors[i] << "*"
-			  << x
-			  << "^" << i ;
+	str = str + ConvertToStr(m_factors[i]) + "*"
+			  + x
+			  + "^" + ConvertToStr(i) ;
+	return str;
 }

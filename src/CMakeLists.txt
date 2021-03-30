@@ -8,5 +8,6 @@ target_sources ("ex1_sharon_levi_bar_ifrah" PRIVATE
 						"Multiply.cpp"
 						"Add.cpp"
 						"Composite.cpp"
-						"Log.cpp")
+						"Log.cpp"
+						"Utilities.cpp")
 											

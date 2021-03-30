@@ -18,8 +18,8 @@ void Multiply::print(shared_ptr<Function>) const {
     std::cout <<" )";
 }
 /*-----------------------------------------------------------------------------*/
-void Multiply::printWithValue(double x)const {
-    std::cout << "("; this->m_mulFunc[0]->printWithValue(x);
-    std::cout << ") * ("; this->m_mulFunc[1]->printWithValue(x);
-    std::cout << " ) ";
+string Multiply::printWithValue(string x)const {
+    string str = "(" + this->m_mulFunc[0]->printWithValue(x) + ")*(" +
+        this->m_mulFunc[1]->printWithValue(x) + ")";
+    return str;
 }

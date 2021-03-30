@@ -8,7 +8,7 @@ public:
     Composite(const shared_ptr<Function>&, const shared_ptr<Function>&);
     double eval(double) override;
     void print(shared_ptr<Function>) const override;
-    void printWithValue(double)const override;
+    string printWithValue(string)const override;
 private:
     vector<shared_ptr<Function>> m_compFunc; 
 };

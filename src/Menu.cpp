@@ -9,7 +9,10 @@
 #include <memory>
 #include <iostream>
 #include <iomanip>
+#include <string>
+#include "Utilities.h"
 using std::shared_ptr;
+using std::string;
 /*-----------------------------------------------------------------------------*/
 Menu::Menu() {
 	//creating the initial functions in the list:
@@ -36,8 +39,7 @@ int Menu::getSize()const {
 }
 /*-----------------------------------------------------------------------------*/
 void Menu::eval(double i,double x){
-	std::cout << std::endl;
-	this->m_functionList[i]->printWithValue(x);
+	std::cout << this->m_functionList[i]->printWithValue(ConvertToStr(x));
 	std::cout << "=";
 	std::cout << std::setprecision(2) << 
 				 this->m_functionList[i]->eval(x) << std::endl;
