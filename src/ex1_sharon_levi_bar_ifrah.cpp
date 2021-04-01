@@ -1,25 +1,26 @@
-﻿//include section:
+﻿/*-------------------------------include section-------------------------------*/
 #include <iostream>
-#include "Poly.h"
 #include "Menu.h"
 #include <string>
 #include <map>
 #include "Macros.h"
 #include "Utilities.h"
-/*-----------------------------------------------------------------------------*/
-//using section:
+// for <streamsize>
+#include<ios>     
+// for numeric_limits
+#include<limits> 
+/*--------------------------------using section--------------------------------*/
 using std::vector;
 using std::string;
 using std::map;
 using std::cin;
-/*-----------------------------------------------------------------------------*/
-//enum section:
+using std::numeric_limits;
+using std::streamsize;
+/*--------------------------------enum section---------------------------------*/
 enum Commands { eval, poly, mul, add, comp, logn, del, help, exitt};
-/*-----------------------------------------------------------------------------*/
-//prototypes section:
+/*------------------------------prototypes section-----------------------------*/
 void setCommandsList(map<string, Commands>&);
-/*-----------------------------------------------------------------------------*/
-//main section:
+/*--------------------------------main section---------------------------------*/
 int main() {
     Menu list;
     map<string, Commands> command_list;
@@ -68,15 +69,14 @@ int main() {
                 return EXIT_SUCCESS;
             }
         }
-        else 
+        else {
             std::cout << "command not found, please try again..." << std::endl;
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }
         std::cout << std::endl;
     }
 }
-
-//functions section:
-
-/*-----------------------------------------------------------------------------*/
+/*----------------------------functions section--------------------------------*/
 
 void setCommandsList(map<string,Commands>& commands) {
     commands.insert(std::pair<string, Commands>(EVAL, eval));
