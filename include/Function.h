@@ -12,8 +12,7 @@ class Function {
 public:
 	Function();
 	virtual double eval(double) = 0;
-	virtual void print(shared_ptr<Function>)const = 0;
-	virtual string printWithValue(string)const = 0;
+	virtual string print(string)const = 0;
 };
 
 

@@ -8,9 +8,8 @@ class Poly: public Function {
 public:
 	Poly(int, vector<double>);
 	const vector<double>& getFactors()const;
-	double eval(double) override;
-	void print(shared_ptr<Function>)const override;
-	string printWithValue(string)const override;
+	virtual double eval(double) override;
+	virtual string print(string)const override;
 private:
 	int m_degree;
 	vector<double> m_factors;

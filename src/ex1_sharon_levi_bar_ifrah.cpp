@@ -25,7 +25,7 @@ int main() {
     map<string, Commands> command_list;
     string command;
     double arg1, arg2;
-
+    //setting a map with the commands as a strings (value) and as a enum (key)
     setCommandsList(command_list);
 
     while (true) {

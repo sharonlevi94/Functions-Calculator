@@ -11,6 +11,7 @@
 #include <iomanip>
 #include <string>
 #include "Utilities.h"
+/*-----------------------------------------------------------------------------*/
 using std::shared_ptr;
 using std::string;
 /*-----------------------------------------------------------------------------*/
@@ -21,10 +22,11 @@ Menu::Menu() {
 }
 /*-----------------------------------------------------------------------------*/
 void Menu::showMenu()const {
+	string x = "x";
 	std::cout << "This is the function list:" << std::endl;
 	for (int i = 0; i < this->m_functionList.size(); i++) {
 		std::cout << i << ": ";
-		this->m_functionList[i]->print(nullptr);
+		std::cout << this->m_functionList[i]->print(x);
 		std::cout << std::endl;
 	}
 	std::cout << "Please enter a command ('help' for command list):";
@@ -39,7 +41,8 @@ int Menu::getSize()const {
 }
 /*-----------------------------------------------------------------------------*/
 void Menu::eval(double i,double x){
-	std::cout << this->m_functionList[i]->printWithValue(ConvertToStr(x));
+	std::cout << std::endl;
+	std::cout << this->m_functionList[i]->print(ConvertToStr(x));
 	std::cout << "=";
 	std::cout << std::setprecision(2) << 
 				 this->m_functionList[i]->eval(x) << std::endl;

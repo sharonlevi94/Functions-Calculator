@@ -3,7 +3,6 @@
 /*-----------------------------------------------------------------------------*/
 class Sin: public Function {
 public:
-	double eval(double) override;
-	void print(shared_ptr<Function>)const override;
-	string printWithValue(string)const override;
+	virtual double eval(double) override;
+	virtual string print(string)const override;
 };

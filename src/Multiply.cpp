@@ -12,14 +12,8 @@ double Multiply::eval(double x) {
     return (this->m_mulFunc[0]->eval(x) * this->m_mulFunc[1]->eval(x));
 }
 /*-----------------------------------------------------------------------------*/
-void Multiply::print(shared_ptr<Function>) const {
-    std::cout << "( "; this->m_mulFunc[0]->print(nullptr);
-    std::cout << ") * ( "; this->m_mulFunc[1]->print(nullptr);
-    std::cout <<" )";
-}
-/*-----------------------------------------------------------------------------*/
-string Multiply::printWithValue(string x)const {
-    string str = "(" + this->m_mulFunc[0]->printWithValue(x) + ")*(" +
-        this->m_mulFunc[1]->printWithValue(x) + ")";
+string Multiply::print(string x)const {
+    string str = "(" + this->m_mulFunc[0]->print(x) + ")*(" +
+        this->m_mulFunc[1]->print(x) + ")";
     return str;
 }

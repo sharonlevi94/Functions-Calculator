@@ -11,17 +11,11 @@ double Log::eval(double x) {
 }
 /*-----------------------------------------------------------------------------*/
 /*
-Output: log <N> <Function>
+Output: log_<N> <Function>
 */
-void Log::print(shared_ptr<Function>myPtr)const {
-    std::cout << "log " << this->m_base << " (";
-    this->m_ptr->print(myPtr);
-    std::cout << ")";
-}
-/*-----------------------------------------------------------------------------*/
-string Log::printWithValue(string x)const {
-   string str = "log" + ConvertToStr(m_base) + " (" +
-   this->m_ptr->printWithValue(x) +
+string Log::print(string x)const {
+   string str = "log_" + ConvertToStr(m_base) + " (" +
+   this->m_ptr->print(x) +
    + ") ";
    return str;
 }
