@@ -18,4 +18,6 @@ public:
     void logFunctions();
 private:
     vector<shared_ptr<Function>> m_functionList;
+    bool isChoiceExists(int, int) const;
+    void choicesAreInvalid(int&, int&);
 };

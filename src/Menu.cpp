@@ -62,6 +62,7 @@ void Menu::createPoly() {
 void Menu::multiplyFunctions() {
     int arg1, arg2;
     std::cin >> arg1 >> arg2;
+    choicesAreInvalid(arg1, arg2);
     this->m_functionList.push_back(std::make_shared<Multiply>
 		(this->m_functionList[arg1], this->m_functionList[arg2]));
 }
@@ -69,6 +70,7 @@ void Menu::multiplyFunctions() {
 void Menu::addFunctions() {
     int arg1, arg2;
     std::cin >> arg1 >> arg2;
+    choicesAreInvalid(arg1, arg2);
     this->m_functionList.push_back(std::make_shared<Add>
 		(this->m_functionList[arg1], this->m_functionList[arg2]));
 }
@@ -76,6 +78,7 @@ void Menu::addFunctions() {
 void Menu::compFunctions() {
     int arg1, arg2;
     std::cin >> arg1 >> arg2;
+    choicesAreInvalid(arg1, arg2);
     this->m_functionList.push_back(std::make_shared<Composite>
 		(this->m_functionList[arg1], this->m_functionList[arg2]));
 }
@@ -85,4 +88,16 @@ void Menu::logFunctions() {
 	std::cin >> base >> function_num;
 	this->m_functionList.push_back(std::make_shared<Log>
 		(base, this->m_functionList[function_num]));
+}
+/*-----------------------------------------------------------------------------*/
+bool Menu::isChoiceExists(int func1, int func2) const {
+    if (func1 < m_functionList.size() and func2 < m_functionList.size()) return true;
+    return false;
+}
+/*-----------------------------------------------------------------------------*/
+void Menu::choicesAreInvalid(int& arg1, int& arg2) {
+    while (not isChoiceExists(arg1, arg2)){
+        std::cout << "Wrong function selection. Enter your function choices again: \n";
+        std::cin >> arg1 >> arg2;
+    }
 }
