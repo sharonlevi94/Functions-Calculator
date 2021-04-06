@@ -19,5 +19,5 @@ public:
 private:
     vector<shared_ptr<Function>> m_functionList;
     bool isChoiceExists(int, int) const;
-    void choicesAreInvalid(int&, int&);
+    void areChoicesValid(int&, int&);
 };
