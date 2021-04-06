@@ -7,9 +7,9 @@ using std::shared_ptr;
 class Menu {
 public:
     Menu();  
-    void eval(double,double);
+    void eval();
     void showMenu()const;
-    void deleteFunction(int);
+    void deleteFunction();
     void createPoly();
     int getSize()const;
     void multiplyFunctions();

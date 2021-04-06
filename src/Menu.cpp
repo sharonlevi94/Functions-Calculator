@@ -9,54 +9,61 @@
 #include <memory>
 #include <iostream>
 #include <iomanip>
-#include <string>
 #include "Utilities.h"
 /*-----------------------------------------------------------------------------*/
 using std::shared_ptr;
 using std::string;
 /*-----------------------------------------------------------------------------*/
 Menu::Menu() {
-	//creating the initial functions in the list:
-	this->m_functionList.push_back(std::make_shared <Sin>());
-	this->m_functionList.push_back(std::make_shared <Ln>());
+    //creating the initial functions in the list:
+    this->m_functionList.push_back(std::make_shared <Sin>());
+    this->m_functionList.push_back(std::make_shared <Ln>());
 }
 /*-----------------------------------------------------------------------------*/
 void Menu::showMenu()const {
-	string x = "x";
-	std::cout << "This is the function list:" << std::endl;
-	for (int i = 0; i < this->m_functionList.size(); i++) {
-		std::cout << i << ": ";
-		std::cout << this->m_functionList[i]->print(x);
-		std::cout << std::endl;
-	}
-	std::cout << "Please enter a command ('help' for command list):";
+    string x = "x";
+    std::cout << "This is the function list:" << std::endl;
+    for (int i = 0; i < this->m_functionList.size(); i++) {
+        std::cout << i << ": ";
+        std::cout << this->m_functionList[i]->print(x);
+        std::cout << std::endl;
+    }
+    std::cout << "Please enter a command ('help' for command list):";
 }
 /*-----------------------------------------------------------------------------*/
-void Menu::deleteFunction(int num) {
-	this->m_functionList.erase(this->m_functionList.begin() + num);
+void Menu::deleteFunction() {
+    int funcToDelete;
+    std::cin >> funcToDelete;
+    areChoicesValid(funcToDelete, funcToDelete); // sending same parameter to  avoid code repeats.lo
+    this->m_functionList.erase(this->m_functionList.begin() + funcToDelete);
 }
 /*-----------------------------------------------------------------------------*/
 int Menu::getSize()const {
-	return this->m_functionList.size();
+    return this->m_functionList.size();
 }
 /*-----------------------------------------------------------------------------*/
-void Menu::eval(double i,double x){
-	std::cout << std::endl;
-	std::cout << this->m_functionList[i]->print(ConvertToStr(x));
-	std::cout << "=";
-	std::cout << std::setprecision(2) << 
-				 this->m_functionList[i]->eval(x) << std::endl;
+void Menu::eval(){
+    int arg1;
+    double arg2;
+    std::cin >> arg1 >> arg2;
+    areChoicesValid(arg1,arg1); // sending same parameter to  avoid code repeats.
+    if (arg1 <= this->getSize())
+        std::cout << std::endl;
+    std::cout << this->m_functionList[arg1]->print(ConvertToStr(arg2));
+    std::cout << "=";
+    std::cout << std::setprecision(2) <<
+              this->m_functionList[arg1]->eval(arg2) << std::endl;
 }
 /*-----------------------------------------------------------------------------*/
 void Menu::createPoly() {
-	double arg1,arg2;
-	std::cin >> arg1;
-	vector<double> factors;
-	for (int i = 0; i <= arg1; i++) {
-		std::cin >> arg2;
-		factors.push_back(arg2);
-	}
-	this->m_functionList.push_back(std::make_shared <Poly>(arg1,factors));
+    double arg1,arg2;
+    std::cin >> arg1;
+    vector<double> factors;
+    for (int i = 0; i <= arg1; i++) {
+        std::cin >> arg2;
+        factors.push_back(arg2);
+    }
+    this->m_functionList.push_back(std::make_shared <Poly>(arg1,factors));
 }
 /*-----------------------------------------------------------------------------*/
 void Menu::multiplyFunctions() {
@@ -64,7 +71,7 @@ void Menu::multiplyFunctions() {
     std::cin >> arg1 >> arg2;
     areChoicesValid(arg1, arg2);
     this->m_functionList.push_back(std::make_shared<Multiply>
-		(this->m_functionList[arg1], this->m_functionList[arg2]));
+                                           (this->m_functionList[arg1], this->m_functionList[arg2]));
 }
 /*-----------------------------------------------------------------------------*/
 void Menu::addFunctions() {
@@ -72,7 +79,7 @@ void Menu::addFunctions() {
     std::cin >> arg1 >> arg2;
     areChoicesValid(arg1, arg2);
     this->m_functionList.push_back(std::make_shared<Add>
-		(this->m_functionList[arg1], this->m_functionList[arg2]));
+                                           (this->m_functionList[arg1], this->m_functionList[arg2]));
 }
 /*-----------------------------------------------------------------------------*/
 void Menu::compFunctions() {
@@ -80,15 +87,15 @@ void Menu::compFunctions() {
     std::cin >> arg1 >> arg2;
     areChoicesValid(arg1, arg2);
     this->m_functionList.push_back(std::make_shared<Composite>
-		(this->m_functionList[arg1], this->m_functionList[arg2]));
+                                           (this->m_functionList[arg1], this->m_functionList[arg2]));
 }
 /*-----------------------------------------------------------------------------*/
 void Menu::logFunctions() {
-	int base, function_num;
-	std::cin >> base >> function_num;
+    int base, function_num;
+    std::cin >> base >> function_num;
     areChoicesValid(function_num, function_num); // sending same parameter to  avoid code repeats.
-	this->m_functionList.push_back(std::make_shared<Log>
-		(base, this->m_functionList[function_num]));
+    this->m_functionList.push_back(std::make_shared<Log>
+                                           (base, this->m_functionList[function_num]));
 }
 /*-----------------------------------------------------------------------------*/
 bool Menu::isChoiceExists(int func1, int func2) const {

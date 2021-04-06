@@ -1,14 +1,12 @@
 ﻿/*-------------------------------include section-------------------------------*/
 #include <iostream>
 #include "Menu.h"
-#include <string>
 #include <map>
 #include "Macros.h"
 #include "Utilities.h"
-// for <streamsize>
-#include<ios>     
+#include<ios>
 // for numeric_limits
-#include<limits> 
+#include<limits>
 /*--------------------------------using section--------------------------------*/
 using std::vector;
 using std::string;
@@ -25,7 +23,6 @@ int main() {
     Menu list;
     map<string, Commands> command_list;
     string command;
-    double arg1, arg2;
     //setting a map with the commands as a strings (value) and as a enum (key)
     setCommandsList(command_list);
 
@@ -35,38 +32,33 @@ int main() {
         auto it = command_list.find(command);
         if (it != command_list.end()) {
             switch (it->second) {
-            case eval:
-                cin >> arg1 >> arg2;
-                if (arg1 <= list.getSize())
-                    list.eval(arg1, arg2);
-                break;
-            case poly:
-                list.createPoly();
-                break;
-            case mul:
-                list.multiplyFunctions();
-                break;
-            case add:
-                list.addFunctions();
-                break;
-            case comp:
-                list.compFunctions();
-                break;
-            case logn:
-                list.logFunctions();
-                break;
-            case del:
-                int arg;
-                cin >> arg;
-                if(arg<=list.getSize())
-                    list.deleteFunction(arg);
-                break;
-            case help:
-                printHelp();
-                break;
-            default:
-                std::cout << "Goodbye" << std::endl;
-                return EXIT_SUCCESS;
+                case eval:
+                    list.eval();
+                    break;
+                case poly:
+                    list.createPoly();
+                    break;
+                case mul:
+                    list.multiplyFunctions();
+                    break;
+                case add:
+                    list.addFunctions();
+                    break;
+                case comp:
+                    list.compFunctions();
+                    break;
+                case logn:
+                    list.logFunctions();
+                    break;
+                case del:
+                    list.deleteFunction();
+                    break;
+                case help:
+                    printHelp();
+                    break;
+                default:
+                    std::cout << "Goodbye" << std::endl;
+                    return EXIT_SUCCESS;
             }
         }
         else {

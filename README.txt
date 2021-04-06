@@ -29,17 +29,16 @@ General:
 CMakeLists.txt- cmake of the project.
 Source files: 
 -CMakeLists.txt - Cmake file to all src files.
+-ex1_sharon_levi_bar_ifrah.cpp //main
+-Menu.cpp - class that redirects all commands.
+-Function.cpp- abstract class, for inheritance.
 -Add.cpp
--CMakeLists.txt
 -Composite.cpp
--Function.cpp
 -Ln.cpp
 -Log.cpp
--Menu.cpp
 -Multiply.cpp
 -Poly.cpp
 -Sin.cpp
--ex1_sharon_levi_bar_ifrah.cpp //main
 
 Headers:
 -CMakeLists.txt - To all headers
